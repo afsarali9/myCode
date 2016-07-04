@@ -1,0 +1,986 @@
+<style>
+  #header-text-area
+  {
+  	max-width: 600px;
+    float: right;
+    text-align: left;
+    padding: 20px;
+    padding-top:30px;
+    padding-bottom:50px;
+    font-weight: 400;
+    margin-right: 22em;
+    font-size: 1.125em;
+    line-height: 1.6;
+    transition:all .5s ease-in-out;
+   	-o-transition:all .5s ease-in-out;
+   	-moz-transition:all .5s ease-in-out;
+   	-webkit-transition:all .5s ease-in-out;
+  }
+
+  #desc
+  {
+    max-width: 620px;
+    float: right;
+    text-align: left;
+    padding: 20px;
+    padding-top:20px;
+    padding-bottom:30px;
+    font-weight: 400;
+    margin-right:3em;
+    font-size: 1.125em;
+    line-height: 1.6;
+    transition:all .5s ease-in-out;
+   	-o-transition:all .5s ease-in-out;
+   	-moz-transition:all .5s ease-in-out;
+   	-webkit-transition:all .5s ease-in-out;
+  }
+  svg
+  {
+    transition:all .5s ease-in-out;
+   	-o-transition:all .5s ease-in-out;
+   	-moz-transition:all .5s ease-in-out;
+   	-webkit-transition:all .5s ease-in-out;
+  }
+  .image-block
+  {
+  position: relative;
+  }
+  use.use--even {
+    visibility: hidden;
+}
+.imgDescription p {
+    position: absolute;
+    margin: 0;
+    text-align: left;
+    font-size: 18px;
+    top: 50%;
+    margin: -2em;
+    margin-left: 14em;
+  }
+
+  .imgDescription p i
+  {
+   font-size:14px ;
+   font-family: 'Alegreya', serif;
+   font-weight:400;
+  }
+
+   .imgDescription img
+  {
+    width: 110px;
+    height: 43px;
+    top: 45%;
+    position: absolute;
+    margin: -20px;
+    margin-left: 70px;
+  }
+  .imgDescription {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.50);
+  color: #eee;
+  transition:0.4s all ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+
+  /*remove comment if you want a gradual transition between states
+  -webkit-transition: visibility opacity 0.2s;
+  */
+}
+
+.image-block:hover .imgDescription {
+  visibility: visible;
+  opacity: 1;
+}
+
+   @media only screen and (min-width: 300px) and (max-width: 399px) {
+    #header-text-area
+    {
+      margin-left: 50px;
+      margin-right: 0px;
+      float: none;
+      padding-left: 0px;
+      padding-right: 0px;
+      font-size: 0.8em;
+      text-align:justify;
+      height:auto;
+    }
+   #header-text-area b
+    {
+      margin-right: 0px;
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
+   svg
+   {
+     width: 230px;
+   }
+   #desc
+   {
+   	 font-size: 0.9em;
+     margin-left: 50px;
+     margin-right: 0px;
+     padding-left: 0px;
+   }
+     .imgDescription
+     {
+    visibility: inherit;
+    opacity: 1;
+     }
+    .imgDescription p {
+    position: absolute;
+    margin: 0;
+    text-align: left;
+    font-size: 11px;
+    top: 50%;
+    margin-left: 80px;
+      margin-top: -18px;
+	}
+   .imgDescription img
+  	{
+    top: 50%;
+    position: absolute;
+    margin: -10px;
+    margin-left: 5px;
+    width:90px;
+    height:33px;
+  }
+  .imgDescription p i
+  {
+   font-size:10px ;
+   font-family: 'Alegreya', serif;
+   font-weight:400;
+  }
+ }
+
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+   #header-text-area
+    {
+      margin-left: 50px;
+      margin-right: 0px;
+      float: none;
+      padding-left: 0px;
+      padding-right: 0px;
+      font-size: 0.9em;
+      text-align:justify;
+      height:auto;
+    }
+   #header-text-area b
+    {
+      margin-right: 0px;
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
+   svg
+   {
+     width: 290px;
+   }
+   #desc
+   {
+   	 font-size: 1.1em;
+     margin-left: 50px;
+     margin-right: 0px;
+     padding-left: 0px;
+   }
+  .imgDescription
+     {
+    visibility: inherit;
+    opacity: 1;
+     }
+    .imgDescription p {
+    position: absolute;
+    margin: 0;
+    text-align: left;
+    font-size: 12px;
+    top: 50%;
+    margin-left: 130px;
+      margin-top: -18px;
+	}
+   .imgDescription img
+  	{
+    top: 50%;
+    position: absolute;
+    margin: -10px;
+    margin-left: 20px;
+    width:90px;
+    height:33px;
+  }
+  .imgDescription p i
+  {
+   font-size:11px ;
+   font-family: 'Alegreya', serif;
+   font-weight:400;
+  }
+ }
+
+   @media only screen and (min-width: 500px) and (max-width: 599px) {
+    #header-text-area
+    {
+      margin-left: 50px;
+      margin-right: 0px;
+      float: none;
+      padding-left: 0px;
+      padding-right: 0px;
+      font-size: 1em;
+      text-align:justify;
+      height:auto;
+    }
+   #header-text-area b
+    {
+      margin-right: 0px;
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
+   svg
+   {
+     width: 350px;
+   }
+   #desc
+   {
+   	 font-size: 1.2em;
+     margin-left: 50px;
+     margin-right: 0px;
+     padding-left: 0px;
+   }
+     .imgDescription
+     {
+    visibility: inherit;
+    opacity: 1;
+     }
+    .imgDescription p {
+    position: absolute;
+    margin: 0;
+    text-align: left;
+    font-size: 13px;
+    top: 50%;
+    margin-left: 150px;
+      margin-top: -18px;
+	}
+   .imgDescription img
+  	{
+    top: 50%;
+    position: absolute;
+    margin: -10px;
+    margin-left: 35px;
+    width:90px;
+    height:33px;
+  }
+  .imgDescription p i
+  {
+   font-size:12px ;
+   font-family: 'Alegreya', serif;
+   font-weight:400;
+  }
+ }
+
+  @media only screen and (min-width: 600px) and (max-width: 699px) {
+    #header-text-area
+    {
+      margin-left: 50px;
+      margin-right: 0px;
+      float: none;
+      padding-left: 0px;
+      padding-right: 0px;
+      font-size: 1.1em;
+      text-align:justify;
+      height:auto;
+    }
+   #header-text-area b
+    {
+      margin-right: 0px;
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
+   svg
+   {
+     width: 410px;
+   }
+   #desc
+   {
+   	 font-size: 1.3em;
+     margin-left: 50px;
+     margin-right: 0px;
+     padding-left: 0px;
+   }
+    .imgDescription
+     {
+    visibility: inherit;
+    opacity: 1;
+     }
+    .imgDescription p {
+    position: absolute;
+    margin: 0;
+    text-align: left;
+    font-size: 14px;
+    top: 50%;
+    margin-left: 190px;
+      margin-top: -18px;
+	}
+   .imgDescription img
+  	{
+    top: 50%;
+    position: absolute;
+    margin: -10px;
+    margin-left: 55px;
+    width:90px;
+    height:33px;
+  }
+  .imgDescription p i
+  {
+   font-size:13px ;
+   font-family: 'Alegreya', serif;
+   font-weight:400;
+  }
+ }
+  /* IPAD */
+  @media only screen and (min-width: 700px) and (max-width: 799px) {
+    #header-text-area
+    {
+      margin-left: 80px;
+      margin-right: 0px;
+      float: none;
+      padding-left: 0px;
+      padding-right: 0px;
+      font-size: 1.125em;
+      text-align:justify;
+      height:auto;
+    }
+   #header-text-area b
+    {
+      margin-right: 0px;
+      margin-top: 20px;
+      font-size: 1.125em;
+    }
+   svg
+   {
+     width: 470px;
+   }
+   #desc
+   {
+   	 font-size: 1.3em;
+     margin-left: 80px;
+     margin-right: 0px;
+     padding-left: 0px;
+   }
+    .imgDescription
+     {
+    visibility: inherit;
+    opacity: 1;
+     }
+    .image-block
+ 	{
+  		position: relative;
+  	}
+    .imgDescription p
+    {
+    position: absolute;
+    margin: 0;
+    text-align: left;
+    font-size: 16px;
+    top: 50%;
+    margin-left: 250px;
+    margin-top: -18px;
+	}
+   .imgDescription img
+  	{
+    top: 50%;
+    position: absolute;
+    margin: -10px;
+    margin-left: 85px;
+    width:120px;
+    height:50px;
+  }
+  .imgDescription p i
+  {
+   font-size:14px ;
+   font-family: 'Alegreya', serif;
+   font-weight:400;
+  }
+ }
+
+   @media only screen and (min-width: 800px) and (max-width: 899px) {
+   #header-text-area
+    {
+      margin-left: 80px;
+      margin-right: 0px;
+      float: none;
+      padding-left: 0px;
+      padding-right: 0px;
+      font-size: 1.125em;
+      text-align:justify;
+      height:auto;
+    }
+   #header-text-area b
+    {
+      margin-right: 0px;
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
+   svg
+   {
+     width: 500px;
+   }
+   #desc
+   {
+   	 font-size: 1.325em;
+     margin-left: 80px;
+     margin-right: 0px;
+     padding-left: 0px;
+     float: none;
+   }
+     .imgDescription
+     {
+    visibility: inherit;
+    opacity: 1;
+     }
+    .imgDescription p {
+    position: absolute;
+    margin: 0;
+    text-align: left;
+    font-size: 16px;
+    top: 50%;
+    margin-left: 280px;
+      margin-top: -18px;
+	}
+   .imgDescription img
+  	{
+    top: 50%;
+    position: absolute;
+    margin: -10px;
+    margin-left: 100px;
+    width:120px;
+    height:50px;
+  }
+  .imgDescription p i
+  {
+   font-size:15px ;
+   font-family: 'Alegreya', serif;
+   font-weight:400;
+  }
+ }
+
+  @media only screen and (min-width: 900px) and (max-width: 999px) {
+     .imgDescription
+     {
+    visibility: inherit;
+    opacity: 1;
+     }
+    .imgDescription p {
+    position: absolute;
+    margin: 0;
+    text-align: left;
+    font-size: 16px;
+    top: 50%;
+    margin-left: 300px;
+      margin-top: -18px;
+	}
+   .imgDescription img
+  	{
+    top: 50%;
+    position: absolute;
+    margin: -10px;
+    margin-left: 120px;
+    width:120px;
+    height:50px;
+  }
+  .imgDescription p i
+  {
+   font-size:15px ;
+   font-family: 'Alegreya', serif;
+   font-weight:400;
+  }
+}
+ /*
+  @media only screen and (min-width: 900px) and (max-width: 999px) {
+    #header-text-area
+    {
+      margin-left: 80px;
+      margin-right: 0px;
+      float: none;
+      padding-left: 0px;
+      padding-right: 0px;
+      font-size: 1.4em;
+      text-align:justify;
+      height:auto;
+    }
+   #header-text-area b
+    {
+      margin-right: 0px;
+      margin-top: 20px;
+      font-size: 1.25em;
+    }
+   svg
+   {
+     width: 470px;
+   }
+   #desc
+   {
+   	 font-size: 1.6em;
+     margin-left: 80px;
+     margin-right: 0px;
+     padding-left: 0px;
+   }
+ }
+  */
+
+}
+/* ---------------------------------------------------------
+  Smallest screen-size: iphone 4/5s
+  @media only screen and (max-width: 20em) {
+  #header-text-area
+  {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  #header-text-area p
+  {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  svg
+  {
+    width: 170px;
+  }
+  #desc
+  {
+    padding: 5px 5px 5px 5px !important;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .sqs-block
+  {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+}
+
+ /* Screen size: 30em
+ @media only screen and (max-width: 30em) {
+  #header-text-area
+  {
+    margin-right: 0px;
+    font-size: 14px;
+  }
+
+  #header-text-area p
+  {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-left: 35px;
+  }
+
+  svg
+  {
+    width: 220px;
+  }
+  #desc
+  {
+    padding: 5px 5px 5px 60px !important;
+    margin-left: 20px;
+  }
+  .sqs-block
+  {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  .imgDescription {
+    visibility: inherit;
+    opacity: 1;
+  }
+  .imgDescription p {
+   position: absolute;
+   margin: 0;
+   text-align: left;
+   font-size: 11px;
+   top: 50%;
+   margin-left: 100px;
+   margin-top: -18px;
+  }
+  .imgDescription img
+  {
+   top: 50%;
+   position: absolute;
+   margin: -10px;
+   margin-left: 5px;
+   width:90px;
+   height:33px;
+  }
+}
+
+
+@media only screen and (max-width: 40em) {
+  .imgDescription p
+  {
+  position: absolute;
+  margin: 0;
+  text-align: left;
+  font-size: 19px;
+  top: 50%;
+  margin: -30px;
+  margin-left: 200px;
+}
+
+  #header-text-area
+  {
+   padding:10px;
+  margin-right: 55px;
+    font-size: 14px;
+}
+#desc
+  {
+  float: right;
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 15px;
+  padding: 10px;
+  font-size: 14px;
+  }
+
+ .imgDescription img
+{
+  top: 50%;
+  position: absolute;
+  margin: -10px;
+  margin-left: 25px;
+}
+
+}
+
+/* Screen size: 50em
+@media only screen and (max-width: 50em) {
+#header-text-area
+{
+max-width: 35em;
+ float: right;
+ text-align: left;
+ padding: 20px;
+ font-weight: 400;
+ margin-right: 250px;
+}
+#desc
+{
+ float: right;
+ text-align: left;
+ margin-left: 55px;
+ padding: 20px;
+ font-size: 18px;
+}
+
+/* Screen size: 60em
+  @media only screen and (max-width: 60em) {
+  #header-text-area
+  {
+  max-width: 600px;
+    float: right;
+    text-align: left;
+    padding: 20px;
+    font-weight: 400;
+    margin-right: 250px;
+  }
+    #desc
+    {
+      font-size: 16px;
+    }
+
+  }
+
+  /* Screen size: 70em
+  @media only screen and (max-width: 70em) {
+  #header-text-area
+  {
+  max-width: 600px;
+    float: right;
+    text-align: left;
+    padding: 20px;
+    font-weight: 400;
+    margin-right: 250px;
+    font-size: 20px;
+  }
+    #desc
+    {
+      font-size: 16px;
+    }
+
+  }
+  -----------------------------------------------------------
+  */
+   @media only screen and (max-width: 50em) {
+ /* #header-text-area
+  {
+  max-width: 35em;
+    float: right;
+    text-align: left;
+    padding: 20px;
+    font-weight: 400;
+    margin-right: 250px;
+    font-size: 18px;
+  }
+  #desc
+  {
+    float: right;
+    text-align: left;
+    margin-left: 55px;
+    padding: 20px;
+    font-size: 18px;
+  } */
+
+
+  @media only screen and (max-width: 37.5em) {
+    .imgDescription p {
+    position: absolute;
+    margin: 0;
+    text-align: left;
+    font-size: 19px;
+    top: 50%;
+    margin: -30px;
+    margin-left: 200px;
+}
+/*
+    #header-text-area
+    {
+     padding:10px;
+    margin-right: 55px;
+      font-size: 14px;
+ }
+  #desc
+    {
+    float: right;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 15px;
+    padding: 10px;
+    font-size: 14px;
+    } */
+
+
+   .imgDescription img
+  {
+    top: 50%;
+    position: absolute;
+    margin: -10px;
+    margin-left: 25px;
+  }
+
+  }
+
+   @media only screen and (max-width: 28em) {
+     .imgDescription {
+
+    visibility: inherit;
+    opacity: 1;
+     }
+    .imgDescription p {
+    position: absolute;
+    margin: 0;
+    text-align: left;
+    font-size: 11px;
+    top: 50%;
+    margin-left: 100px;
+      margin-top: -18px;
+}
+
+   .imgDescription img
+  {
+    top: 50%;
+    position: absolute;
+    margin: -10px;
+    margin-left: 5px;
+    width:90px;
+    height:33px;
+  }
+ /*  #header-text-area
+     {
+       margin-right: 0px;
+       font-size: 14px;
+     }
+     #desc
+     {
+         padding: 5px 26px 5px 60px !important;
+
+     }
+ /*    svg {
+    width: 300px;
+    } */
+  }
+
+  @media only screen and (max-width: 390px) {
+ /*   svg {
+    width: 270px;
+    }
+     #header-text-area{
+          margin-right: 20px;
+     }
+   #header-text-area p
+     {
+       font-size: 13px;
+       line-height: 1.6;
+       margin-left: 35px;
+
+     }
+     #desc
+     {
+         padding: 5px 26px 5px 20px !important;
+     } */
+    .sqs-block {
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+  }
+*/
+</style>
+<br>
+<center><a href="#second"><img src="http://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/5756fcdb40261d96c4437c1c/1465318620208/down.png" style="width:80px"></a></center>
+
+<br><br><br><br><br>
+<div class="row" id="second" style="padding:10px; margin:0px;">
+  <div class="col-md-6 col-sm-12" style="padding:0px">
+    <div class="image-block wow fadeInUp" data-wow-offset="10" data-wow-duration="1.2s">
+      <img src="https://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/576179c7746fb9f420b982f8/1466005959781/GARDEN_BRIDGE.jpg?format=1500w" class="img-responsive">
+
+      <a href="http://vimeo.com/8245346" rel="prettyPhoto" title=""><img src="images/thumbnails/flash-logo.jpg" alt="vimeo" width="60" /></a>
+
+        <a href="https://vimeo.com/169981099" rel="prettyPhoto" title=""> <div class="imgDescription">
+               <img src="http://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/575705f37da24f26ca79c1d1/1465320948509/playicon.png" class="col-md-4">
+            <p class="text-right col-md-8" style="font-family: 'Open Sans', sans-serif;">
+
+            GARDEN BRIDGE<br><span style="font-weight:300;">Global Goals</span><br><i>Directed By - Charlie Robbins</i>
+        </div></a>
+
+
+    </div>
+  </div>
+
+  <div class="col-md-6 col-sm-12" style="padding:0px">
+    <div class="image-block wow fadeInUp" data-wow-offset="10" data-wow-duration="1.2s" style="">
+      <img src="https://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/57617a342b8dde734f780865/1466006069165/UNICEF.jpg?format=1500w" class="img-responsive">
+       <a target="_blank" href="https://vimeo.com/169990787">
+           <div class="imgDescription">
+       <img src="http://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/575705f37da24f26ca79c1d1/1465320948509/playicon.png" class="col-md-4">
+          <p class="text-right col-md-8" style="font-family: 'Open Sans', sans-serif;">
+
+      UNICEF<br><span style="font-weight:300;">Global Goals</span><br><i>Directed By - Alejandro Terraf</i></div>
+         </a>
+
+    </div>
+  </div>
+   <div class="col-md-6 col-sm-12" style="padding:0px">
+    <div class="image-block wow fadeInUp" data-wow-offset="10" data-wow-duration="1.2s" style="">
+      <img src="https://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/57617b14e321404dd31ccbab/1466006293327/GOOGLE_COMPARE.jpg?format=1500w" class="img-responsive">
+      <a target="_blank" href="https://youtu.be/L0DDBPWNTyU"><div class="imgDescription">
+        <img src="http://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/575705f37da24f26ca79c1d1/1465320948509/playicon.png" class="col-md-4">
+          <p class="text-right col-md-8" style="font-family: 'Open Sans', sans-serif;">
+
+      GOOGLE COMPARE<br><span style="font-weight:300;">Student Becomes Teacher</span><br><i>Directed By - Stian Smestad</i></div></a>
+    </div>
+  </div>
+
+   <div class="col-md-6 col-sm-12" style="padding:0px">
+    <div class="image-block wow fadeInUp" data-wow-offset="10" data-wow-duration="1.2s"  style="">
+      <img src="https://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/57617974746fb9f420b98086/1466005876773/ABBEY_ROAD.jpg?format=1500w" class="img-responsive">
+       <a href="https://vimeo.com/169993709">
+         <div class="imgDescription">
+       <img src="http://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/575705f37da24f26ca79c1d1/1465320948509/playicon.png" class="col-md-4">
+          <p class="text-right col-md-8" style="font-family: 'Open Sans', sans-serif;">
+
+      GOOGLE STREET VIEW<br><span style="font-weight:300;">Inside Abbey Road</span><br><i>Directed By - Rob Blishan</i></div></a>
+    </div>
+    </div>
+
+   <div class="col-md-6 col-sm-12" style="padding:0px">
+    <div class="image-block wow fadeInUp" data-wow-offset="10" data-wow-duration="1.2s" style="">
+      <img src="https://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/57617b6e2fe1316f09d22b66/1466006382840/KINGSMAN.jpg?format=1500w" class="img-responsive">
+
+      <a target="_blank" href="https://vimeo.com/169990769">
+        <div class="imgDescription">
+
+          <img src="http://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/575705f37da24f26ca79c1d1/1465320948509/playicon.png" class="col-md-4">
+          <p class="text-right col-md-8" style="font-family: 'Open Sans', sans-serif;">
+
+      20TH CENTURY FOX<br><span style="font-weight:300;">How To Be A Kingsman</span><br><i>Directed By - Jack Driscoll</i></div></a>
+    </div>
+    </div>
+
+  <div class="col-md-6 col-sm-12" style="padding:0px">
+    <div class="image-block wow fadeInUp" data-wow-offset="10" data-wow-duration="1.2s"  style="">
+      <img src="https://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/57617a7b2b8dde734f780a0f/1466006139883/GOOGLE_SCIENCE_FAIR.jpg?format=1500w" class="img-responsive">
+       <a target="_blank" href="https://vimeo.com/170023782">
+         <div class="imgDescription">
+       <img src="http://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/575705f37da24f26ca79c1d1/1465320948509/playicon.png" class="col-md-4">
+          <p class="text-right col-md-8" style="font-family: 'Open Sans', sans-serif;">
+
+      GOOGLE SCIENCE FAIR<br><span style="font-weight:300;">Launch Film</span><br><i>Directed By - Tom Haines</i></div></a>
+    </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12" style="padding:0px">
+     <div class="image-block wow fadeInUp" data-wow-offset="10" data-wow-duration="1.2s" style="">
+       <img src="https://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/57617998746fb9f420b981a0/1466005913280/ALZHEIMERS_RESEARCH.jpg?format=1500w" class="img-responsive">
+       <a target="_blank" href="https://vimeo.com/170039879">
+         <div class="imgDescription">
+
+           <img src="http://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/575705f37da24f26ca79c1d1/1465320948509/playicon.png" class="col-md-4">
+           <p class="text-right col-md-8" style="font-family: 'Open Sans', sans-serif;">
+
+       ALZHEIMER'S RESEARCH UK<br><span style="font-weight:300;">A Walk Through Dementia</span><br><i>Directed By: Richard Hunter</i></div></a>
+     </div>
+     </div>
+
+   <div class="col-md-6 col-sm-12" style="padding:0px">
+     <div class="image-block wow fadeInUp" data-wow-offset="10" data-wow-duration="1.2s"  style="">
+       <img src="https://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/57617b942fe1316f09d22c81/1466006421058/MALIBU.jpg?format=1500w" class="img-responsive">
+        <a target="_blank" href="https://vimeo.com/169992984">
+          <div class="imgDescription">
+        <img src="http://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/575705f37da24f26ca79c1d1/1465320948509/playicon.png" class="col-md-4">
+           <p class="text-right col-md-8" style="font-family: 'Open Sans', sans-serif;">
+
+       BEST SUMMER EVER<br><span style="font-weight:300;">Malibu</span><br><i>Agency: Across the Pond</i></div></a>
+     </div>
+     </div>
+--------------------------------
+<div class="col-md-6 col-sm-12" style="padding:0px">
+ <div class="image-block wow fadeInUp" data-wow-offset="10" data-wow-duration="1.2s" style="">
+   <img src="https://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/57617bec22482edeb3dad608/1466006509181/SPACE_LAB.jpg?format=1500w" class="img-responsive">
+
+     <div class="imgDescription">
+
+       <img src="http://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/575705f37da24f26ca79c1d1/1465320948509/playicon.png" class="col-md-4">
+       <p class="text-right col-md-8" style="font-family: 'Open Sans', sans-serif;">
+
+   SPACE LAB<br><span style="font-weight:300;"></span><br><i>Directed By: Jack Cole</i></div></a>
+ </div>
+ </div>
+
+<div class="col-md-6 col-sm-12" style="padding:0px">
+ <div class="image-block wow fadeInUp" data-wow-offset="10" data-wow-duration="1.2s"  style="">
+   <img src="https://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/57617c1022482edeb3dad6fc/1466006546020/ZEITGEIST.jpg?format=1500w" class="img-responsive">
+
+      <div class="imgDescription">
+    <img src="http://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/575705f37da24f26ca79c1d1/1465320948509/playicon.png" class="col-md-4">
+       <p class="text-right col-md-8" style="font-family: 'Open Sans', sans-serif;">
+
+   ZEITGEIST<br><span style="font-weight:300;"></span><br><i>Directed By: Trent Jaklitsch</i></div></a>
+ </div>
+ </div>
+ ---------------------------------
+
+ <div class="col-md-6 col-sm-12" style="padding:0px">
+  <div class="image-block wow fadeInUp" data-wow-offset="10" data-wow-duration="1.2s" style="">
+    <img src="https://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/57617c3622482edeb3dad816/1466006583217/GOOGLE_ANALYTICS.jpg?format=1500w" class="img-responsive">
+
+      <div class="imgDescription">
+
+        <img src="http://static1.squarespace.com/static/5751916cf699bbceac7199fd/t/575705f37da24f26ca79c1d1/1465320948509/playicon.png" class="col-md-4">
+        <p class="text-right col-md-8" style="font-family: 'Open Sans', sans-serif;">
+
+    GOOGLE ANALYTICS<br><span style="font-weight:300;"></span><br><i>Directed By: Misha Manson-Smith</i></div></a>
+  </div>
+  </div>
+
+
+</div>

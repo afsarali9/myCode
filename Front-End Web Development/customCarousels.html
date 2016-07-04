@@ -7,12 +7,9 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="js/owl.carousel/owl-carousel/owl.carousel.css">
-  <link rel="stylesheet" href="js/owl.carousel/owl-carousel/owl.theme.css">
-  <script src="js/owl.carousel/owl-carousel/owl.carousel.js"></script>
   <title>Custom Carousels</title>
 
-<!-- javascript for this page -->
+<!-- JS & jQuery -->
 <script type="text/javascript">
   // Carousel prevent auto-slide
   $(function() {
@@ -35,45 +32,11 @@
     $('#slidetext1').html(text);
   });
 
-
-  // Carousel 2 Number Indicators
-  var total = $('.item.two').length;
-  var currentIndex = $('div.active.two').index() + 1;
-  $('#slidetext2').html(currentIndex + '-'  + total);
-
-  // This triggers after each slide change
-  $('.carousel2').on('slid.bs.carousel', function () {
-    currentIndex = $('div.active.two').index() + 1;
-    var total = $('.item.two').length;
-    // Now display this wherever you want
-    var text = currentIndex + '-' + total;
-    $('#slidetext2').html(text);
-  });
-
-
-  // Carousel 3
-    $(document).ready(function() {
-
-      $(".owl-carousel").owlCarousel({
-
-          navigation : true, // Show next and prev buttons
-          slideSpeed : 300,
-          paginationSpeed : 400,
-          singleItem:true
-
-          // "singleItem:true" is a shortcut for:
-          // items : 1,
-          // itemsDesktop : false,
-          // itemsDesktopSmall : false,
-          // itemsTablet: false,
-          // itemsMobile : false
-      });
-    });
-
-
 </script>
 
-<!-- CSS styling for this page -->
+
+
+<!-- CSS  -->
   <style type="text/css">
     #mainPage .row {
       margin: 3.15em;
@@ -112,7 +75,11 @@
     #rightGlyph:hover {
       opacity: 1;
     }
-    #slidetext1, #slidetext2, #slidetext3 {
+    #rightGlyph2 {
+      opacity: 0;
+      width: 100%;
+    }
+    #slidetext1 {
       float: right;
     }
     #spacer {
@@ -121,18 +88,33 @@
     #spacer2 {
       padding: 2em;
     }
+    .customCursorQuestion {
+       cursor: url(images/cursorQ.cur), auto;
+    }
+    .customCursorArrow {
+       cursor: url(images/cursor2.cur), auto;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    a:hover {
+       text-decoration: none;
+       color: black;
+    }
+
 
   </style>
 </head>
+
+<!-- HTML -->
 <body>
 
-
-<!-- Now let the DOM begin!! -->
 <div id="mainPage" class="container-fluid">
   <div class="row">
 
     <section class="col-xs-12">
-      <h1 id="title">Custom Carousels!!</h1>
+      <h1 id="title">Custom Carousels</h1>
     </section>
 
     <section class="col-xs-12">
@@ -145,11 +127,11 @@
 
 <!-- Carousel 1 -->
     <section id="carousel" class="col-xs-3">
-        <h3>Carousel 1<br><br></h3>
-        <h3>
-          This carousel uses JS to cycle through the images, as well as display
-          a counter of the images and the current position at the bottom right.
-        </h3>
+        <h3>Carousel 1</h3>
+        <h3><ul>
+          <li>jQuery for number indicator</li>
+          <li>Left/Right glyph icon controls</li>
+        </ul></h3>
     </section>
 
     <section class="col-xs-6">
@@ -191,10 +173,12 @@
 
 <!-- Carousel 2 -->
     <section id="carousel" class="col-xs-3">
-        <h3>Carousel 2<br><br></h3>
-        <h3>
-          Uses circle buttons to indicate image number.
-        </h3>
+        <h3 class="customCursorQuestion"><a href="" class="customCursorQuestion">Carousel 2</a></h3>
+        <h3><ul>
+          <li>Circle indicators</li>
+          <li>Cursor changes over image</li>
+          <li>Click moves progresses slides</li>
+        </ul></h3>
     </section>
 
 <!-- CAROUSEL -->
@@ -223,10 +207,7 @@
       <!-- carousel inner -->
 
       <!-- Controls -->
-      <a id="leftGlyph" class="left carousel-control" href="#carousel2" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span></a>
-
-      <a id="rightGlyph" class="right carousel-control" href="#carousel2" role="button" data-slide="next">
+      <a id="rightGlyph2" class="right carousel-control customCursorArrow" href="#carousel2" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right"></span></a>
 
       </div> <!-- carousel -->
@@ -235,26 +216,11 @@
     <section id="spacer" class="col-xs-3"></section>
     <section id="spacer2" class="col-xs-12"></section>
 
-<!-- Project 3 -->
-    <section id="carousel" class="col-xs-3">
-        <h3>Carousel 3<br>Effect<br><br></h3>
-        <h3>
-          Description
-        </h3>
-    </section>
+<!-------------------------------------------------------------------------->
 
-    <section class="col-xs-6">
-      <!-- CAROUSEL -->
-      <div id="owl-demo" class="owl-carousel owl-theme">
-        <div class="item"><img src="images/IMG3.jpg" alt="IMG3"></div>
-        <div class="item"><img src="images/IMG4.jpg" alt="IMG4"></div>
-        <div class="item"><img src="images/IMG5.jpg" alt="IMG5"></div>
-      </div>
 
-    </section>
 
-    <section id="spacer" class="col-xs-3"></section>
-    <section id="spacer" class="col-xs-12"></section>
+
 
 
 
