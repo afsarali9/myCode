@@ -35,39 +35,41 @@
     $('#slidetext1').html(text);
   });
 
-// Carousel 2
-  $(document).ready(function() {
 
-    $("#owl-demo").owlCarousel({
-
-        navigation : true, // Show next and prev buttons
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem:true
-
-        // "singleItem:true" is a shortcut for:
-        // items : 1,
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false
-    });
-  });
-
-
-  // Carousel 3 Number Indicators
-  var total = $('.item.three').length;
-  var currentIndex = $('div.active.three').index() + 1;
-  $('#slidetext3').html(currentIndex + '-'  + total);
+  // Carousel 2 Number Indicators
+  var total = $('.item.two').length;
+  var currentIndex = $('div.active.two').index() + 1;
+  $('#slidetext2').html(currentIndex + '-'  + total);
 
   // This triggers after each slide change
-  $('.carousel3').on('slid.bs.carousel', function () {
-    currentIndex = $('div.active.three').index() + 1;
-    var total = $('.item.three').length;
+  $('.carousel2').on('slid.bs.carousel', function () {
+    currentIndex = $('div.active.two').index() + 1;
+    var total = $('.item.two').length;
     // Now display this wherever you want
     var text = currentIndex + '-' + total;
-    $('#slidetext3').html(text);
+    $('#slidetext2').html(text);
   });
+
+
+  // Carousel 3
+    $(document).ready(function() {
+
+      $(".owl-carousel").owlCarousel({
+
+          navigation : true, // Show next and prev buttons
+          slideSpeed : 300,
+          paginationSpeed : 400,
+          singleItem:true
+
+          // "singleItem:true" is a shortcut for:
+          // items : 1,
+          // itemsDesktop : false,
+          // itemsDesktopSmall : false,
+          // itemsTablet: false,
+          // itemsMobile : false
+      });
+    });
+
 
 </script>
 
@@ -119,11 +121,7 @@
     #spacer2 {
       padding: 2em;
     }
-    #owl-demo .item img {
-    display: block;
-    width: 100%;
-    height: auto;
-    }
+
   </style>
 </head>
 <body>
@@ -191,11 +189,11 @@
     <section id="spacer" class="col-xs-12"></section>
 
 
-<!-- Project 2 -->
+<!-- Carousel 2 -->
     <section id="carousel" class="col-xs-3">
-        <h3>Carousel 2<br>Effect<br><br></h3>
+        <h3>Carousel 2<br><br></h3>
         <h3>
-          Description
+          Uses circle buttons to indicate image number.
         </h3>
     </section>
 
