@@ -11,6 +11,10 @@
 .customCursorQuestion {
    cursor: url(../images/cursorQ.cur), auto;
 }
+::selection {
+  background: white; /* WebKit/Blink Browsers */
+  color: blue;
+}
 #landingPage .row {
   margin-left: 3.15em;
   margin-right: 3.15em;
@@ -43,18 +47,10 @@
 #rightGlyph {
   opacity: 0;
   margin-right: 30px;
-}
-#rightGlyph:hover {
-  opacity: 1;
-  margin-right: 30px;
-}
-#rightGlyph1 {
-  opacity: 0;
-  margin-right: 30px;
   width: 100%;
 }
 #spacerHalf {
-  padding:.5em;
+  padding:.05em;
 }
 #spacer {
   padding: 1em;
@@ -76,6 +72,10 @@
   margin: -1em;
   top: 1em;
   font-size: 4em;
+}
+#name a {
+  text-decoration: none;
+  color: #333;
 }
 #questionMarkImage1, #questionMarkImage2, #questionMarkImage3, #questionMarkImage4,
 #questionMarkImage5, #questionMarkImage6, #questionMarkImage7, #questionMarkImage8,
@@ -145,9 +145,17 @@
   font-style: italic;
   text-decoration: none;
 }
+#listView a:hover {
+  text-decoration: underline;
+  font-style: normal;
+}
 #desc span {
   color: #333;
   font-style: italic;
+}
+#desc span:hover {
+  font-style: normal;
+  text-decoration: underline;
 }
 #desc a {
   color: #333;
@@ -184,6 +192,10 @@
 #back a {
   color: #333;
 }
+#back a:hover {
+  text-decoration: underline;
+  font-style: normal;
+}
 #resumeBody h1 {
   font-size: 4em;
   line-height: 1.2em;
@@ -191,6 +203,9 @@
 #resumeBody h1 sup {
   color: blue;
   font-size: 65%;
+}
+p {
+  line-height: 1;
 }
 #refs {
   position: relative;
@@ -241,6 +256,10 @@
   font-style: italic;
   text-decoration: none;
 }
+#imageView a:hover {
+  font-style: normal;;
+  text-decoration: underline;;
+}
 
 #mainImageFooter {
   padding-left: 0px;
@@ -260,7 +279,7 @@ hr {
   border-width: 1px 0;
   margin: 18px 0;
 }
-#previous a, #next a{
+#previous a {
   color: #333;
   text-decoration: none;
   font-style: italic;
@@ -270,11 +289,26 @@ hr {
   z-index: 99;
   bottom: 3em;
   opacity: 1;
-
+}
+#next a {
+ color: #333;
+ text-decoration: none;
+ font-style: italic;
+ position: fixed;
+ bottom: 5em;
+ background-color: white;
+ z-index: 99;
+ bottom: 3em;
+ opacity: 1;
+ width: 20%;
+}
+#previous a:hover, #next a:hover{
+  color: #333;
+  text-decoration: underline;;
+  font-style: normal;
 }
 #previous h1, #next h1 {
   font-size: 4em;
-
 }
 #nameListView{
   position: fixed;
@@ -287,6 +321,14 @@ hr {
   margin: -1em;
   top: 1em;
   font-size: 4em;
+}
+#nameListView a {
+  color: #333;
+  text-decoration: none;
+}
+#nameListView a:hover {
+  color: #333;
+  text-decoration: none;
 }
 #contactListView h1 {
   position: fixed;
@@ -479,13 +521,27 @@ hr {
     font-size: 21px;
   }
 }
-
+@media only screen and (min-width: 1700px) and (max-width: 1800px) {
+  #landingPage #desc h1 {
+    line-height: 1.15;
+    right: 1em;
+  }
+}
+@media only screen and (min-width: 1800px) and (max-width: 1900px) {
+  #landingPage #desc h1 {
+    line-height: 1.15;
+    right: 1.4em;
+  }
+}
+@media only screen and (min-width: 1900px) and (max-width: 2000px) {
+  #landingPage #desc h1 {
+    line-height: 1.15;
+    right: 1.8em;
+  }
+}
 @media only screen and (min-width: 1700px) and (max-width: 2000px) {
   #name {
     padding-right: 2em
-  }
-  #landingPage #desc h1 {
-    line-height: 1.15;
   }
   #listView {
     padding-right: 4em
@@ -517,9 +573,4 @@ hr {
   #projectPage h3 {
     font-size: 24px;
   }
-}
-
-/* for testing purposes only */
-#testImage1 {
-
 }
