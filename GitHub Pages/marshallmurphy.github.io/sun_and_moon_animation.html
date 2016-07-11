@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta title="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scrollme-master/jquery.scrollme.min.js"></script>
+  <title>scrollme</title>
+
+<!-- JS & jQuery -->
+<script type="text/javascript">
+
+</script>
+
+<!-- CSS  -->
+<style type="text/css">
+
+  * { text-align:center; }
+  #spacerHuge {
+    padding-bottom: 100em;
+  }
+  #spacerNormal {
+    padding: 2em;
+  }
+  .wrapper
+  {
+
+  }
+  .scrollme
+  {
+
+  }
+  .animateme
+  {
+    width:100%;
+    transform-origin:center center center;
+  }
+  .stars {
+    position: absolute;
+  }
+  .stars img {
+    width: 20%;
+  }
+  .moon1 {
+    position: absolute;
+  }
+  .moon1 img {
+    width: 20%;
+  }
+  .rocket {
+    position: absolute;
+    top: 300px;
+  }
+  .rocket img {
+    width: 15%;
+  }
+
+</style>
+</head>
+
+<!-- HTML -->
+<body>
+  <div class="wrapper">
+
+
+
+  <div id="mainPage" class="container-fluid">
+    <div class="row">
+      <section id="spacerHuge" class="col-xs-12"><h1>SCROLL!</h1></section>
+
+      <section id="spacerNormal" class="col-xs-6"></section>
+      <section class="col-xs-6">
+
+        <div class="scrollme">
+          <div
+            class="stars animateme"
+            data-when="span"
+            data-from="0"
+            data-to="1"
+            data-easing="linear"
+            data-rotatez="270"
+            data-translatey="100"
+          ><img src="images/sky_stars.jpg">
+          </div>
+        </div>
+
+        <div class="scrollme">
+          <div
+            class="moon1 animateme"
+            data-when="span"
+            data-from="0"
+            data-to="1"
+            data-easing="linear"
+            data-rotatez="720"
+            data-translatey="100"
+          ><img src="images/moon1.png">
+          </div>
+        </div>
+
+        <div class="scrollme">
+          <div
+            class="rocket animateme"
+            data-when="span"
+            data-from="0"
+            data-to="1"
+            data-easing="linear"
+            data-rotatez="0"
+            data-translatey="-400"
+            transform: translate2d(0px, -110px);
+          ><img src="images/rocketShip.png">
+          </div>
+        </div>
+
+      </section>
+
+    <section id="spacerHuge" class="col-xs-12"></section>
+
+  </div>
+
+
+
+
+
+<!--  reference necessary js components  -->
+
+
+</body>
+</html>
