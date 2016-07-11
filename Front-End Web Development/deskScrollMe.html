@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta title="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scrollme-master/jquery.scrollme.min.js"></script>
+  <title>Computer Desk ScrollMe</title>
+
+<!-- JS & jQuery -->
+<script type="text/javascript">
+
+</script>
+
+<!-- CSS  -->
+<style type="text/css">
+
+  * { text-align:center; }
+  #spacer {
+    padding: 1em;
+  }
+  #spacer2 {
+    padding: 2em;
+  }
+  #spacerHuge {
+    padding-bottom: 80em;
+  }
+  .wrapper
+  {
+background-color:  #b7eee6;
+  }
+  .scrollme
+  {
+
+  }
+  .animateme
+  {
+    width:100%;
+    transform-origin:center center center;
+  }
+  .desk {
+    position: absolute;
+    bottom: -22em;
+    z-index: 0;
+  }
+  .desk img {
+    width: 60%;
+  }
+  .dog {
+    position: absolute;
+    left: 16em;
+    top: 14em;
+    z-index: 1;
+  }
+  .dog img {
+    width: 15%;
+  }
+  .plant {
+    position: absolute;
+    right: 40em;
+    top: 0em;
+    z-index: 1;
+  }
+  .plant img {
+    width: 30%;
+  }
+  .coffeeMug {
+    position: absolute;
+    left: 5em;
+    top: 5em;
+    z-index: 1;
+    opacity: 0;
+  }
+  .coffeeMug img {
+    width: 5%;
+  }
+
+  </style>
+  </head>
+
+  <!-- HTML -->
+  <body>
+    <div class="wrapper">
+
+    <div id="mainPage" class="container-fluid">
+      <div class="row">
+        <section id="spacerHuge" class="col-xs-12"><h1>SCROLL!</h1></section>
+        <section id="spacer" class="col-xs-12">------------Start-------------</section>
+
+
+        <section class="col-xs-6">
+          <div class="scrollme">
+            <div
+              class="desk animateme"
+              data-when="span"
+              data-to="1"
+              data-from="0.5"
+              data-easing="linear"
+              data-rotatez="0"
+              data-translatey="0"
+              data-opacity="1"
+            ><img src="images/desk.png">
+            </div>
+          </div>
+
+          <div class="scrollme">
+            <div
+            class="dog animateme"
+            data-when="span"
+            data-to="0.25"
+            data-from="0.5"
+            data-easing="easeinout"
+            data-rotatez="0"
+            data-translatex="500"
+            data-translatey="0"
+            data-opacity="0"
+            ><img src="images/dog.png">
+            </div>
+          </div>
+
+          <div class="scrollme">
+            <div
+              class="plant animateme"
+              data-when="span"
+              data-to="0.4"
+              data-from="0.25"
+              data-easing="easeinout"
+              data-rotatez="0"
+              data-translatex="350"
+              data-translatey="0"
+              data-opacity="1"
+            ><img src="images/plant.png">
+            </div>
+          </div>
+
+          <div class="scrollme">
+            <div
+              class="coffeeMug animateme"
+              data-when="span"
+              data-to="0.15"
+              data-from="0.35"
+              data-easing="easeinout"
+              data-rotatez="0"
+              data-translatex="500"
+              data-translatey="0"
+              data-opacity="0"
+            ><img src="images/coffeeMug.png">
+            </div>
+          </div>
+
+        </section>
+
+        <section id="spacer" class="col-xs-6"></section>
+        <section id="spacerHuge" class="col-xs-12"></section>
+        <section id="spacerHuge" class="col-xs-12"></section>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!--  reference necessary js components  -->
+
+
+  </body>
+  </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta title="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scrollme-master/jquery.scrollme.min.js"></script>
+  <title>Earth and Planes ScrollMe</title>
+
+<!-- JS & jQuery -->
+<script type="text/javascript">
+
+</script>
+
+<!-- CSS  -->
+<style type="text/css">
+  * { text-align:center; }
+  #spacerHuge {
+    padding-bottom: 80em;
+  }
+  #spacerNormal {
+    padding: 2em;
+  }
+  .wrapper
+  {
+
+  }
+  .scrollme
+  {
+
+  }
+  .animateme
+  {
+    width:100%;
+    transform-origin:center center center;
+  }
+  .horizon {
+    position: absolute;
+  }
+  .horizon img {
+    width: 100%;
+  }
+
+
+
+</style>
+</head>
+
+<!-- HTML -->
+<body>
+  <div class="wrapper">
+
+  <div id="mainPage" class="container-fluid">
+    <div class="row">
+      <section id="spacerHuge" class="col-xs-12"><h1>SCROLL!</h1></section>
+
+      <section class="col-xs-12">
+
+        <!-- Earth will be part of the static, scrolling background.
+        Therefore, just animate planes arcing over the background.
+        This may be done by creating a few images with planes at the edge
+        and then rotating the image when scrolled. Arcs may be made less
+        circular by decreasing the y-index while the image rotates. -->
+
+        <div class="scrollme">
+          <div
+            class="plane1 animateme"
+            data-when="span"
+            data-to="0.7"
+            data-from="0.8"
+            data-easing="linear"
+            data-rotatez="0"
+            data-translatey="25"
+            data-opacity="0"
+          ><img src="images/explosionGreen.png">
+          </div>
+        </div>
+
+
+
+      </section>
+
+      <section id="spacerHuge" class="col-xs-12"></section>
+
+    </div>
+  </div>
+
+
+
+
+
+<!--  reference necessary js components  -->
+
+
+</body>
+</html>
