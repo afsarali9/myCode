@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta title="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <title>Last Week Tonight with John Oliver</title>
+
+<!-- JS and jQuery Functionality -->
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+        var logo = $("div h1");
+        var last = $("#last");
+        var week = $("#week");
+        var tonight = $("#tonight");
+        var With = $("#with");
+        var jo = $("#jo");
+
+
+        // Week spins to mirror before becoming visible
+        week.animate({borderSpacing: 180}, {
+         step: function(now,fx) {
+            week.css('transform','rotateY('+now+'deg)');
+          },
+          duration:'fast'
+        },'linear');
+
+        // "Last Week Tonight" appears
+        last.animate({opacity: '1'}, 100);
+        week.delay(50).animate({opacity: '1', marginTop: '0px'}, 100);
+        tonight.delay(500).animate({opacity: '1', marginTop: '1.1em'}, 100);
+
+        // "Last Week Tonight" zooms out and moves right
+        last.delay(1100).animate({marginLeft: '200px', fontSize: '4em', marginTop: "1.5em"}, 100);
+        week.delay(840).animate({marginLeft: '200px', fontSize: '4em'}, 100);
+        tonight.delay(600).animate({marginLeft: '200px', fontSize: '4em'}, 100);
+
+        // "With John Oliver" appears
+        With.delay(1600).animate({marginLeft: '210px'}, 100);
+        With.delay(100).animate({opacity: '1'}, 100);
+        jo.delay(1800).animate({opacity: '1'}, 100);
+
+        // Week spins to normal
+        week.delay(1000).animate({borderSpacing: 360}, {
+         step: function(now,fx) {
+            week.css('transform','rotateY('+now+'deg)');
+          },
+          duration:'slow'
+       },'linear');
+
+
+    });
+  });
+  </script>
+
+  <!-- CSS STYLING -->
+  <style>
+  .rotate {
+    transform: rotateY(180deg);
+  }
+  #mainPage .row {
+    margin: 3em;
+  }
+  #last {
+    font-size: 8em;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0;
+    margin-bottom: 0;
+  }
+  #week {
+    font-size: 8em;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    /*transform: rotateY(180deg);*/
+    position: fixed;
+  }
+  #tonight {
+    font-size: 8em;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0;
+    margin-top: 2em;
+    margin-bottom: 0em;
+  }
+  #with {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0;
+    margin-top: 0em;
+    font-size: 1em;
+  }
+  #jo {
+    color: red;
+    text-transform: uppercase;
+    font-size: 1.6em;
+    letter-spacing: 3px;
+    opacity: 0;
+    margin-top: -1em;
+  }
+  h3 span {
+    margin-top: 0em;
+  }
+  </style>
+</head>
+
+<body>
+
+  <div id="mainPage" class="container-fluid">
+    <div class="row">
+
+      <section class="col-xs-12">
+        <button>Start Animation</button>
+        <div>
+          <h1 id="last">Last</h1>
+          <h1 id="week">Week</h1>
+          <h1 id="tonight">Tonight</h1>
+          <span id="with"><sup>With</sup></span><span id="jo">   John Oliver</span>
+
+        </div>
+      </section>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta title="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <title>Custom Carousels</title>
+
+<!-- JS & jQuery -->
+<script type="text/javascript">
+  // Carousel prevent auto-slide
+  $(function() {
+    $('.carousel').carousel({
+      interval: false,
+    });
+  });
+
+  // Carousel 1 Number Indicators
+  var total = $('.item.one').length;
+  var currentIndex = $('div.active.one').index() + 1;
+  $('#slidetext1').html(currentIndex + '-'  + total);
+
+  // This triggers after each slide change
+  $('.carousel1').on('slid.bs.carousel', function () {
+    currentIndex = $('div.active.one').index() + 1;
+    var total = $('.item.one').length;
+    // Now display this wherever you want
+    var text = currentIndex + '-' + total;
+    $('#slidetext1').html(text);
+  });
+
+</script>
+
+
+
+<!-- CSS  -->
+  <style type="text/css">
+    #mainPage .row {
+      margin: 3.15em;
+    }
+    #title {
+      text-align: center;
+      padding-top: 1em;
+      padding-right: 1em;
+      padding-bottom: 1em;
+      padding-left: 1em;
+      font-size: 4em;
+      background-color: #D8D8D8;
+    }
+    #desc {
+      text-align: center;
+      line-height: 1.5;
+    }
+    #carousel1, #carousel2, #carousel3 {
+      box-shadow: 5px 5px 5px #888888;
+    }
+    #carousel h3 {
+      line-height: 1.25;
+    }
+    #carousel h3:first-of-type {
+      font-weight: bold;
+    }
+    #leftGlyph {
+      opacity: 0;
+    }
+    #leftGlyph:hover {
+      opacity: 1;
+    }
+    #rightGlyph {
+      opacity: 0;
+    }
+    #rightGlyph:hover {
+      opacity: 1;
+    }
+    #rightGlyph2 {
+      opacity: 0;
+      width: 100%;
+    }
+    #slidetext1 {
+      float: right;
+    }
+    #spacer {
+      padding: 1em;
+    }
+    #spacer2 {
+      padding: 2em;
+    }
+    .customCursorQuestion {
+       cursor: url(images/cursorQ.cur), auto;
+    }
+    .customCursorArrow {
+       cursor: url(images/cursor2.cur), auto;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    a:hover {
+       text-decoration: none;
+       color: black;
+    }
+
+
+  </style>
+</head>
+
+<!-- HTML -->
+<body>
+
+<div id="mainPage" class="container-fluid">
+  <div class="row">
+
+    <section class="col-xs-12">
+      <h1 id="title">Custom Carousels</h1>
+    </section>
+
+    <section class="col-xs-12">
+      <h1 id="desc">
+        Here are a few custom carousels with different effects!<br> They use
+        JavaScript and Jquery to achieve all of their wonderfulness.</h1>
+    </section>
+
+    <section id="spacer2" class="col-xs-12"></section>
+
+<!-- Carousel 1 -->
+    <section id="carousel" class="col-xs-3">
+        <h3>Carousel 1</h3>
+        <h3><ul>
+          <li>jQuery for number indicator</li>
+          <li>Left/Right glyph icon controls</li>
+        </ul></h3>
+    </section>
+
+    <section class="col-xs-6">
+      <!-- CAROUSEL -->
+      <div class="carousel slide carousel1" id="carousel1">
+
+      <!-- Image URLs -->
+      <div class="carousel-inner">
+          <div class="item active one">
+            <img src="images/IMG1.jpg" alt="IMG1">
+          </div>
+          <div class="item one">
+            <img src="images/IMG2.jpg" alt="IMG2">
+          </div>
+          <div class="item one">
+            <img src="images/IMG3.jpg" alt="IMG3">
+          </div>
+          <div class="item one">
+            <img src="images/IMG4.jpg" alt="IMG4">
+          </div>
+      </div> <!-- carousel inner -->
+
+      <!-- Controls -->
+      <a id="leftGlyph" class="left carousel-control" href="#carousel1" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span></a>
+
+      <a id="rightGlyph" class="right carousel-control" href="#carousel1" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+      </div> <!-- carousel -->
+
+      <!-- For JavaScript bottom number counter -->
+      <h3 id="slidetext1"></h3>
+    </section>
+
+    <section id="spacer" class="col-xs-3"></section>
+    <section id="spacer" class="col-xs-12"></section>
+
+
+<!-- Carousel 2 -->
+    <section id="carousel" class="col-xs-3">
+        <h3 class="customCursorQuestion"><a href="" class="customCursorQuestion">Carousel 2</a></h3>
+        <h3><ul>
+          <li>Circle indicators</li>
+          <li>Title links to page for project</li>
+          <li>Cursor changes over title</li>
+          <li>Cursor changes over image</li>
+          <li>Click progresses slides</li>
+        </ul></h3>
+    </section>
+
+<!-- CAROUSEL -->
+    <section class="col-xs-6">
+      <div class="carousel slide carousel2" id="carousel2">
+
+        <!-- Circle indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#featured" data-slide-to="0" class="active"></li>
+          <li data-target="#featured" data-slide-to="1"></li>
+          <li data-target="#featured" data-slide-to="2"></li>
+        </ol>
+
+      <!-- Image URLs -->
+      <div class="carousel-inner">
+        <div class="item active two">
+          <img src="images/IMG2.jpg" alt="IMG2">
+        </div>
+        <div class="item two">
+          <img src="images/IMG3.jpg" alt="IMG3">
+        </div>
+        <div class="item two">
+          <img src="images/IMG4.jpg" alt="IMG4">
+        </div>
+      </div>
+      <!-- carousel inner -->
+
+      <!-- Controls -->
+      <a id="rightGlyph2" class="right carousel-control customCursorArrow" href="#carousel2" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+      </div> <!-- carousel -->
+    </section>
+
+    <section id="spacer" class="col-xs-3"></section>
+    <section id="spacer2" class="col-xs-12"></section>
+
+
+
+
+
+
+
+
+<!--  reference necessary js components  -->
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

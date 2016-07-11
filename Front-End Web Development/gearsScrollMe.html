@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta title="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scrollme-master/jquery.scrollme.min.js"></script>
+  <title>Gears ScrollMe</title>
+
+<!-- JS & jQuery -->
+<script type="text/javascript">
+
+</script>
+
+<!-- CSS  -->
+<style type="text/css">
+
+  * { text-align:center; }
+  #spacer {
+    padding: 1em;
+  }
+  #spacer2 {
+    padding: 2em;
+  }
+  #spacerHuge {
+    padding-bottom: 80em;
+  }
+  .wrapper
+  {
+  background-image: url("images/blueprint2.jpg");
+  }
+  .scrollme
+  {
+
+  }
+  .animateme
+  {
+    width:100%;
+    transform-origin:center center center;
+  }
+  .gear1 {
+    position: absolute;
+  }
+  .gear1 img {
+    width: 20%;
+  }
+  .gear2 {
+    position: absolute;
+    top: 8em;
+    right: 11em;
+  }
+  .gear2 img {
+    width: 15%;
+  }
+  .gear3 {
+    position: absolute;
+    top: 16em;
+    right:3em;
+  }
+  .gear3 img {
+    width: 12%;
+  }
+
+  .gear4 {
+    position: absolute;
+    top: 24em;
+    right:8em;
+  }
+  .gear4 img {
+    width: 10%;
+  }
+
+  </style>
+  </head>
+
+  <!-- HTML -->
+  <body>
+    <div class="wrapper">
+
+    <div id="mainPage" class="container-fluid">
+      <div class="row">
+        <section id="spacerHuge" class="col-xs-12"><h1>SCROLL!</h1></section>
+        <section id="spacer" class="col-xs-12">------------Start-------------</section>
+
+
+        <section class="col-xs-6">
+          <div class="scrollme">
+            <div
+              class="gear1 animateme"
+              data-when="span"
+              data-to="1"
+              data-from="0"
+              data-easing="linear"
+              data-rotatez="180"
+              data-translatey="0"
+              data-opacity="1"
+            ><img src="images/gear1.png">
+            </div>
+          </div>
+
+          <div class="scrollme">
+            <div
+              class="gear2 animateme"
+              data-when="span"
+              data-to="1"
+              data-from="0"
+              data-easing="linear"
+              data-rotatez="-360"
+              data-translatey="0"
+              data-opacity="1"
+            ><img src="images/gear2.png">
+            </div>
+          </div>
+
+          <div class="scrollme">
+            <div
+              class="gear3 animateme"
+              data-when="span"
+              data-to="1"
+              data-from="0"
+              data-easing="linear"
+              data-rotatez="540"
+              data-translatey="0"
+              data-opacity="1"
+            ><img src="images/gear2.png">
+            </div>
+          </div>
+
+          <div class="scrollme">
+            <div
+              class="gear4 animateme"
+              data-when="span"
+              data-to="1"
+              data-from="0"
+              data-easing="linear"
+              data-rotatez="-720"
+              data-translatey="0"
+              data-opacity="1"
+            ><img src="images/gear2.png">
+            </div>
+          </div>
+
+
+
+        </section>
+
+        <section id="spacer" class="col-xs-6"></section>
+        <section id="spacerHuge" class="col-xs-12"></section>
+        <section id="spacerHuge" class="col-xs-12"></section>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!--  reference necessary js components  -->
+
+
+  </body>
+  </html>
